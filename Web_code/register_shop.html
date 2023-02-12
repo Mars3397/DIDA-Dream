@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>填寫店家資料</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<style> 
+        body {
+            background-color: #120f28;
+        }
+
+		.bg {
+			background-color: #120f28;
+			border: 1px solid #9E8C6A;
+			border-radius: 10px;
+		}
+
+        .p {
+            font-family: Garamond, serif;
+            background-color: #d4d4d4;
+            border: 1px solid #9E8C6A;
+        }
+
+        .p:hover {
+            color: black;
+            font-family: Garamond, serif;
+            background-color: #d4d4d4;
+            border: 1px solid white;
+        }
+
+        .glow_light {
+            color: #fffae3;
+            text-shadow: #fff 1px 0 30px;
+            font-family: Garamond, serif;
+        }
+
+        .glow {
+            color: #fffae3;
+            font-family: Garamond, serif;
+        }
+
+        .black {
+            color: black;
+            font-family: Garamond, serif;
+        }
+
+        .input {
+            background: #120f28;
+            border: none;
+            border-bottom: 1px solid #fffae3;
+            border-radius: 2px;
+			color: #a4a4a4;
+        }
+
+		::placeholder {
+			color: #a4a4a4;
+		}
+    </style>
+
+	</head>
+	<body>
+		<div class="container glow">
+		
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					
+					<!-- Start Sign In Form -->
+					<form action="register_shop.php" class="fh5co-form animate-box bg" data-animate-effect="fadeIn" method="post">
+						<h2 style="color: #fffae3;" class="glow_light">填寫店家資料</h2>
+						<div class="form-group">
+							<label for="name" style="font-weight: bold;">店家名稱：</label>
+							<input type="text" style=" color: #a4a4a4;background: #120f28; border: none; border-bottom: 1px solid #fffae3;
+							border-radius: 2px;" class="form-control input" id="name" autocomplete="off" name="s_name">
+							<!-- <p class="input">請輸入店家名稱</p> -->
+						</div>
+
+						<div class="form-group">
+							<label for="address" style="font-weight: bold;">店家地址：</label>
+							<input type="text" style=" color: #a4a4a4;background: #120f28; border: none; border-bottom: 1px solid #fffae3;
+							border-radius: 2px;" class="form-control input" id="address" autocomplete="off" name="address">
+							<!-- <p class="input">請輸入店家地址</p> -->
+							<input type="hidden" id="lat" name="lat" value="">
+							<input type="hidden" id="lon" name="lon" value="">
+						</div>
+
+						<label style="font-weight: bold; margin-right: 10px;" for="type">請選擇店家類別：</label>
+						<select name="s_category" class="input" id="type">
+							<option value="7-11">7-11</option> 
+							<option value="全家">全家</option> 
+							<option value="麵包店">麵包店</option>
+						</select>
+						<br><br>
+						<div class="form-group">
+							<label style="font-weight: bold;">營業日：</label><br>
+							<div>
+							  <div>
+								<input type="checkbox" name="s_openday1" value="ㄧ" id="mon"/>
+								<label for="mon" style="margin-right: 5px;">星期一 </label>
+								<input type="checkbox" name="s_openday2" value="二" id="tue"/>
+								<label for="tue" style="margin-right: 5px;">星期二 </label>
+								<input type="checkbox" name="s_openday3" value="三" id="wed"/>
+								<label for="wed" style="margin-right: 5px;">星期三 </label>
+								<input type="checkbox" name="s_openday4" value="四" id="tur"/>
+								<label for="tur" style="margin-right: 5px;">星期四 </label>
+							  </div>
+							  <div>
+								<input type="checkbox" name="s_openday5" value="五" id="fri"/>
+								<label for="fri" style="margin-right: 5px;">星期五 </label>
+								<input type="checkbox" name="s_openday6" value="六" id="sat"/>
+								<label for="sat" style="margin-right: 5px;">星期六 </label>
+								<input type="checkbox" name="s_openday7" value="日" id="sun"/>
+								<label for="sun" style="margin-right: 5px;">星期日 </label>
+							  </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="start" style="font-weight: bold;">開始營業時間：</label>
+							<input type="time" id="start" name="start" style="color: black; width: 50%">
+						</div>
+						<div class="form-group">
+							<label for="end" style="font-weight: bold;">結束營業時間：</label>
+							<input type="time" id="end" name="end" style="color: black; width: 50%">
+						</div>
+
+						<div class="form-group">
+							<input type="submit" value="註冊" class="p btn btn-light">
+						</div>
+						
+					</form>
+					<!-- END Sign In Form -->
+
+				</div>
+			</div>
+		</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Placeholder -->
+	<script src="js/jquery.placeholder.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaRPTrJub0mPX86F8q_DBSpV8zQs56xM"
+      defer
+    ></script>
+
+	<script>
+		$(document).ready(function() {
+			$('#address').on('input', function(){
+				var address = $(this).val().trim();
+
+				if (address != '') {
+					var geocoder = new google.maps.Geocoder();
+					geocoder.geocode( { 'address': address}, function(results, status) {
+						if (status == 'OK') {
+							console.log(results[0]);
+							$('#lat').val(results[0].geometry.location.lat());
+							$('#lon').val(results[0].geometry.location.lng());
+						}
+					});
+				}
+			});
+		});
+	</script>
+
+	</body>
+</html>
+
