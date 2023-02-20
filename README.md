@@ -9,9 +9,13 @@
 同時，結合 LINE 禮物搭建線上捐贈平台，讓剩食有效地送到需要的人手中。
 
 擴大品牌影響力後，不僅提升即期品銷量，也讓理念被更多人看見，進而響應捐贈，以剩食為燈，點亮需要幫助的家庭。
-<br/>
 
-## Web File Usage
+完整企劃介紹：https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
+
+# 技術架構圖
+![](https://i.imgur.com/oWAvGFq.png)
+
+# Web File Usage
 
 - **心理測驗** `psycho_test`
     - `start.php`: 心理測驗之起始頁面
@@ -52,3 +56,55 @@
     - `set_uid.php`: 將傳進來的 user id 存進 session
     - `record.php`: 展示集點卡頁面（設有一鍵分享功能）
     - `update.php`: 用來更新 s_id 讓他在 shops 跟 meals 的 database 都一致（用了一次就不需要了）
+
+# LINEBot Usage
+## 技術介紹
+1. 客製化主動推播：在 server 內建立一條 thread，並設定根據資料庫的資料定期推播消息給使用者
+2. 圖文選單：利用 Rich Menu API 來實現多個圖文選單切換，並且可以根據使用者身分設定每個人的選單形式
+3. LINE LIFF：利用 LIFF API 讓網頁端可以直接獲取個人資料如 LINE ID 等等，可以省去 redirect 到網站的成本
+
+## 使用者選單
+### 主選單
+![](https://i.imgur.com/2RUxQmj.png)
+- 查詢即期品：根據使用者偏好、位置，客製化顯示出適合他的商家以及即期品品項
+- 優惠地圖：預計可連結至 LINE SPOT 的優惠地圖
+- 推薦給好友：可一鍵分享即食予官方帳號給好友
+- 資料修改：連結至 edit_user.php 的頁面進行個人資料修改
+- 聯絡我們：透過 flex message 顯示聯絡訊息
+### 即食予
+![](https://i.imgur.com/CtNq6bJ.png)
+- 發送即食卷：連結到 LINE 禮物捐贈即食卷給 requesters，透過後端資料庫配對給需要的人
+- 集點卡：連結到 record.php 顯示集點卡
+- 支持我們：預計可連結至 LINE PAY
+- 了解計畫：透過 flex message 大致介紹即時予計畫
+
+## 商家選單
+### 主選單
+![](https://i.imgur.com/TIQKDbO.png)
+- 商品修改：連結至 edit_meal.php 修改商品
+- 加入會員：加入會員可享有會員回饋
+- 資料修改：可一鍵分享即食予官方帳號給好友
+- 聯絡我們：透過 flex message 顯示聯絡訊息
+### 其他功能
+![](https://i.imgur.com/YBdDWdv.png)
+- 查詢即期品：根據使用者偏好、位置，客製化顯示出適合他的商家以及即期品品項
+- 優惠地圖：預計可連結至 LINE SPOT 的優惠地圖
+- 推薦給好友：可一鍵分享即食予官方帳號給好友
+### 即食予
+![](https://i.imgur.com/MASRRCL.png)
+- 參與計畫：小商家加入即時予計畫的管道
+- 了解計畫：透過 flex message 大致介紹即時予計畫
+- 解鎖會員功能
+
+## Requesters 選單
+### 主選單
+![](https://i.imgur.com/2RUxQmj.png)
+- 查詢即期品：根據使用者偏好、位置，客製化顯示出適合他的商家以及即期品品項
+- 優惠地圖：預計可連結至 LINE SPOT 的優惠地圖
+- 推薦給好友：可一鍵分享即食予官方帳號給好友
+- 資料修改：連結至 edit_user.php 的頁面進行個人資料修改
+- 聯絡我們：透過 flex message 顯示聯絡訊息
+### 即食予
+![](https://i.imgur.com/B9kwZfw.png)
+- 收取即食卷：透過後端資料庫配對收取捐贈者捐贈的即食卷
+- 了解計畫：透過 flex message 大致介紹即時予計畫

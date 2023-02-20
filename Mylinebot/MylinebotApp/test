@@ -1,0 +1,55 @@
+<VirtualHost *:80>
+
+    <Directory /var/www/html/>
+        Options -Indexes
+        Require all granted
+    </Directory>
+
+    <Files ".ht*">
+        Require all denied
+    </Files>
+
+    ServerAdmin james61124@gmail.com
+    ServerName 2022.dida-dream.com
+    ServerAlias 2022.dida-dream.com
+
+    DocumentRoot /var/www/html
+
+    SetEnvIf Request_URI "^/favicon\.ico$" dontlog
+    SetEnvIf Request_URI "^/robots\.txt$" dontlog
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    DirectoryIndex index.php index.html
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =2022.dida-dream.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+<VirtualHost *:80>
+
+    <Directory /var/www/line-bot.dida-dream.com>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+    ServerAdmin james61124@gmail.com
+    ServerName line-bot.dida-dream.com
+    ServerAlias line-bot.dida-dream.com
+    DocumentRoot /var/www/line-bot.dida-dream.com
+
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:8000/
+    ProxyPassReverse / http://127.0.0.1:8000/
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    WSGIScriptAlias / /var/www/line-bot.dida-dream.com/Mylinebot/wsgi.py
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =line-bot.dida-dream.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
