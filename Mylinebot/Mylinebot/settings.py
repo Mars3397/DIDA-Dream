@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-#f#@fb-d_qg0eh+ms1^xnv9@2v!oq*%oqehjo0d1e93@%ii&*3'
-LINE_CHANNEL_ACCESS_TOKEN = 'VgIDgAR2eSjJ5IH84TxE0l6lK651Oi5c9St+VaONUhvmjpDIRvJKzKQ+CYoQPESy9MvIqpJW2zTfen9MR0dg5FJLEOejNZ9tZImQfTSZ57Ot+r3ZjAdIsEciGvuazq5tPhF+KRCxXKyxH5ju+WymswdB04t89/1O/w1cDnyilFU=' #在line developer的message api裡
-LINE_CHANNEL_SECRET = 'e2eda42c49e79a39129f1039eacf6773' #在line developer的basic setting裡
+LINE_CHANNEL_ACCESS_TOKEN = '' #在line developer的message api裡
+LINE_CHANNEL_SECRET = '' #在line developer的basic setting裡
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
