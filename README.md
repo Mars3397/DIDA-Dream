@@ -77,7 +77,7 @@
 - 集點卡：連結到 record.php 顯示集點卡
 - 支持我們：預計可連結至 LINE PAY
 - 了解計畫：透過 flex message 大致介紹即時予計畫
-
+   
 ## 商家選單
 ### 主選單
 ![](https://i.imgur.com/TIQKDbO.png)
