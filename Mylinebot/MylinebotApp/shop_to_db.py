@@ -1,3 +1,5 @@
+# update database
+
 from shop_id import shop_id_all
 import pymysql
 import time
@@ -11,8 +13,6 @@ print(result)
 #connect_db = mysql.connector.connect(user='DIDA-Dream', password='didadida15w', host='68.178.145.107',port=3306, database='DIDA-Dream', auth_plugin='mysql_native_password')
 #print(connect_db)
 connect_db = pymysql.connect(host = 'localhost', user='DIDA-Dream', passwd='didadida15w', charset='utf8mb4', db='mysql')
-#connect_db = pymysql.connect(host = 'localhost', user='root', passwd='', charset='utf8', db='familymart') #didadida15w
-#connect_db = pymysql.connect(DATABASES)
 with connect_db.cursor() as cursor:
 
     cursor.execute("TRUNCATE TABLE MylinebotApp_shops")
