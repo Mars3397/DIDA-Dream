@@ -20,3 +20,23 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# vultr -> computer
+# Godaddy -> 網域
+# Apache 
+
+# let's encrypt -> SSL
+
+# gunicorn 
+# 1. service restart ..
+# 2. gunicorn ... -> deamon，kill process id
+# 3. tmux 
+
+# mysql phpmyadmin
+# Django 
+
+# python3 manage.py runserver
+# python3 manage.py makemigrations
+# python3 manage.py migrate
+
+# webhook url 
