@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'mysql',                      # Or path to database file if using sqlite3.
         'USER': 'DIDA-Dream',                      # Not used with sqlite3.
-        'PASSWORD': 'didadida15w',                  # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # 68.178.145.107
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
         'OPTIONS': {
@@ -98,20 +98,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-#         'NAME': 'line_fresh',
-#         'USER': 'root',
-#         'PASSWORD': '', 
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306', 
-#         'OPTIONS': {
-#             'init_command': "set sql_mode='STRICT_TRANS_TABLES'"
-#         },
-
-#     }
-# }
 
 
 # Password validation

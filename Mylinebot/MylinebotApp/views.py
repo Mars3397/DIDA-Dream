@@ -69,17 +69,9 @@ def index(request):
 def push_message():
     while True:
         localtime = time.localtime()
-        #result = time.strftime("%Y-%m-%d %I:%M:%S %p", localtime)
         result = time.strftime("%Y-%m-%d %I:%M:%S %p", localtime)
         if result=="2023-01-14 12:41:00 PM":
-            # info = '推播推播 05:35:00'
-            # message.append(TextSendMessage(text=info))
             user_info = users.objects.all()
-            
-
-            # user_info = users.objects.filter(u_id=uid)
-            
-
             for user in user_info:
                 meals_name = []
                 meals_quantity = []
@@ -107,21 +99,16 @@ def push_message():
                     q = [float(shop[1]),float(shop[2])]
                     shop_distance[shop[0]] = math.dist(p, q)
                     count = count + 1
-                    # print(count)
-                    # print([shop.s_name,shop.s_latitude,shop.s_longtitude],',')
 
                 sorted_shop = sorted(shop_distance.items(), key=lambda x:x[1])
                 visited_shop_number = 0
                 while visited_shop_number < 5:
                     family_shop_info = family_shops.objects.filter(s_name=sorted_shop[visited_shop_number][0])
-                    # print(visited_shop_number)
-                    # print(sorted_shop[visited_shop_number])
                     if len(family_shop_info) == 0:
                         visited_shop_number = visited_shop_number + 1
                         continue
                     for family_shop in family_shop_info:
                         print(family_shop.s_id)
-                        # print("haha")
                         if visited_shop_number == 5:
                             break
                         shop_info = meals.objects.filter(s_id=family_shop.s_id)
@@ -182,9 +169,7 @@ def check_role():
     user_information = {}
     while True:
         user_info = users.objects.all()
-        # print("haha")
         for user in user_info:
-            # print("haha")
             if user.u_id not in user_information.keys():
                 user_information[user.u_id] = user.u_role
                 continue
@@ -562,7 +547,7 @@ def callback(request):
                 return HttpResponse()
             elif isinstance(event, BeaconEvent): 
                 message = []
-                message.append(TextSendMessage(text='haha beacon'))
+                message.append(TextSendMessage(text='beacon'))
                 print(request.body)
                 line_bot_api.reply_message(event.reply_token,message)
                 return HttpResponse()

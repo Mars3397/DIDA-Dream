@@ -20,7 +20,7 @@ from MylinebotApp import views #MylinebotApp改成自己綠色的資料夾
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('callback', views.callback),
-    path('^index',views.index),#當進入http://domain/index網址時，觸發index函數
+    path('^index',views.index), #當進入http://domain/index網址時，觸發index函數
 ]
 
 # from django.urls import include, re_path
