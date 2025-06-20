@@ -4,14 +4,24 @@
 
 # English
 
-## About DIDA Dream
+## Introduction
 
-"If we could reduce global food waste by just 1/4, we could feed everyone in the world." This inspiration led to the creation of DIDA Dream, 
-a project that aims to redistribute surplus food through an integrated [LINE Official Account](https://page.line.me/?accountId=195dceee).
+DIDA Dream is an award-winning social innovation project that tackles global food waste through technology. Recognized with the Second Place award at the 2022 LINE Fresh Competition in Taipei (among 250 competing teams), our solution demonstrates how technology can bridge the gap between surplus food and those in need.
 
-We gather information about near-expiry products through nationwide convenience store APIs and local business registration systems. Through our creative "You Are What You Eat" campaign, we attract customers and obtain user preferences for precise notifications, enhancing user engagement. Additionally, we've built an online donation platform integrated with LINE Gift, ensuring surplus food effectively reaches those in need. As our brand influence grows, we not only increase the sales of near-expiry products but also spread awareness of our mission, encouraging more people to participate in donations and helping families in need.
+Our project began with a simple yet powerful insight: "If we could reduce global food waste by just 1/4, we could feed everyone in the world." This inspiration led us to develop an integrated platform that connects convenience stores, local businesses, and communities through a [LINE Official Account](https://page.line.me/?accountId=195dceee).
+
+Using PHP, Python, and cloud-based services, we've built a comprehensive system that:
+- Consolidates near-expiry food data from convenience stores and local merchants
+- Enables easy purchase and charitable donation of surplus food
+- Creates a sustainable cycle of food redistribution
+
+The project has evolved from a competition entry into a full-fledged solution that's making a real impact in reducing food waste and helping communities.
 
 Complete project introduction: https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
+
+## How It Works
+
+We gather information about near-expiry products through nationwide convenience store APIs and local business registration systems. Through our creative "You Are What You Eat" campaign, we attract customers and obtain user preferences for precise notifications, enhancing user engagement. Additionally, we've built an online donation platform integrated with LINE Gift, ensuring surplus food effectively reaches those in need. As our brand influence grows, we not only increase the sales of near-expiry products but also spread awareness of our mission, encouraging more people to participate in donations and helping families in need.
 
 ## Technical Architecture
 ![](https://i.imgur.com/oWAvGFq.png)
@@ -95,16 +105,27 @@ Complete project introduction: https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
 
 # Chinese
 
-「只要全球減少 1/4 的食物浪費，就可以餵飽每個人」，我們由此發想「即食予」企劃，
+## 專案簡介
 
-透過整合即期品的 [LINE 官方帳號](https://page.line.me/?accountId=195dceee)，實現剩食再分配的目標。
+即食予是一個獲獎的社會創新專案，運用科技解決全球食物浪費問題。在2022年台北LINE Fresh競賽中從250個參賽團隊中脫穎而出獲得第二名，展現了科技如何能夠有效地連結剩餘食物與需要幫助的人。
+
+我們的專案源於一個簡單但深具意義的洞察：「只要全球減少1/4的食物浪費，就可以餵飽每個人」。這個想法促使我們開發了一個整合性平台，通過 [LINE官方帳號](https://page.line.me/?accountId=195dceee) 連結便利商店、在地商家和社區。
+
+使用PHP、Python和雲端服務，我們建立了一個完整的系統，實現：
+- 整合便利商店和在地商家的即期品資訊
+- 便捷的購物和慈善捐贈機制
+- 創造永續的食物重分配循環
+
+這個專案已從競賽作品發展成為一個實際發揮影響力的解決方案，在減少食物浪費和幫助社區方面產生實質效益。
+
+完整企劃介紹：https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
+
+## 運作方式
 
 我們使用全台超商 API 及在地商家註冊系統取得即期品資訊。透過具創意的 You Are What You Eat 企劃，吸引客戶加入，
 並藉此取得用戶偏好、精準推播，提升使用者黏著度。
 同時，結合 LINE 禮物搭建線上捐贈平台，讓剩食有效地送到需要的人手中。
 擴大品牌影響力後，不僅能提升即期品銷量，也讓理念被更多人看見，進而響應捐贈，以剩食為燈，點亮需要幫助的家庭。
-
-完整企劃介紹：https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
 
 # 技術架構圖
 ![](https://i.imgur.com/oWAvGFq.png)
