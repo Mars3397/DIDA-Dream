@@ -1,4 +1,99 @@
-# 即食予 DIDA Dream
+# DIDA Dream (即食予)
+
+[English](#english) | [中文](#chinese)
+
+# English
+
+## About DIDA Dream
+
+"If we could reduce global food waste by just 1/4, we could feed everyone in the world." This inspiration led to the creation of DIDA Dream, 
+a project that aims to redistribute surplus food through an integrated [LINE Official Account](https://page.line.me/?accountId=195dceee).
+
+We gather information about near-expiry products through nationwide convenience store APIs and local business registration systems. Through our creative "You Are What You Eat" campaign, we attract customers and obtain user preferences for precise notifications, enhancing user engagement. Additionally, we've built an online donation platform integrated with LINE Gift, ensuring surplus food effectively reaches those in need. As our brand influence grows, we not only increase the sales of near-expiry products but also spread awareness of our mission, encouraging more people to participate in donations and helping families in need.
+
+Complete project introduction: https://prezi.com/view/tweaIMQvrEdc4rFSVIEQ/
+
+## Technical Architecture
+![](https://i.imgur.com/oWAvGFq.png)
+
+## Web File Structure
+
+### Psychological Test (`psycho_test`)
+- `start.php`: Initial page of the psychological test
+- `test_page1-6.php`: Pages for questions 1-6
+- `final.php`: Results page (with one-click sharing)
+- `test.php`: Processes answers and stores them in database
+
+### Profile Management
+- `edit_shop.php`: Modify merchant profile
+- `edit_user_php.php`: Modify personal profile
+
+### Product Management (`shop.php`)
+- `add_meal.php`: Add new products
+- `delete_meal.php`: Remove products
+- `shop_search.php`: Search specific products
+- `edit_meal.php`: Modify product information
+
+### My Near-Expiry Products (`leftovers_page.php`)
+- `clear_meal.php`: One-click clear all near-expiry products
+- `leftovers_search.php`: Search specific near-expiry products
+- `update_quantity.php`: Update product quantity (+ / - buttons)
+
+### Search Functions (`search_page.php`)
+- `search.php`: Filter stores based on user criteria
+- `select.php`: Display all near-expiry products from selected stores
+
+### LINE Bot Integration
+- `privacy_doc.html`: Privacy terms for DIDA Dream project
+- `buygift.php`: Demonstration of food voucher purchase process (web prototype)
+
+### Registration
+- User registration: `register_page.php`
+- Store registration: `register_shop.html`
+- Supporting files:
+  - `register.php`: Store new user information
+  - `register_shop.php`: Store new merchant information
+
+### Other Utilities
+- `redirect.php`: Page redirection with user ID handling
+- `connect.php`: phpMyAdmin database connection
+- `set_uid.php`: Session user ID management
+- `record.php`: Point card display (with sharing feature)
+
+## LINE Bot Features
+
+### Technical Overview
+1. Customized Push Notifications: Server-side thread for scheduled notifications based on database information
+2. Rich Menu: Multiple switchable rich menus using Rich Menu API, customized by user type
+3. LINE LIFF: Web integration for direct access to personal information like LINE ID
+
+### User Menu Features
+- Product Search
+- Benefit Map
+- Friend Referral
+- Profile Management
+- Contact Support
+- Food Voucher System
+- Point Card
+- Project Information
+
+### Merchant Menu Features
+- Product Management
+- Membership System
+- Profile Updates
+- Support Contact
+- Project Participation
+
+### Requester Menu Features
+- Product Search
+- Benefit Map
+- Friend Referral
+- Profile Management
+- Food Voucher Reception
+
+---
+
+# Chinese
 
 「只要全球減少 1/4 的食物浪費，就可以餵飽每個人」，我們由此發想「即食予」企劃，
 
